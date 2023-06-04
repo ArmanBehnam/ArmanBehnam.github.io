@@ -1,6 +1,7 @@
-# Anirudh257.github.io
+# ArmanBehnam.github.io
 
-This is my personal blog. I will be using it to pen down my thoughts and write about my projects, interests and my goals in life.
-I will also be adding past year question papers, worksheets, and soft copies of text books of my courses.
+Welcome to the repository of my personal blog.
 
-I created this website by using http://jmcglone.com/guides/github-pages/ and also taking inspiration from https://sheikharaf.com/ and https://priyanshrastogi.com/
+I am an enterprising tech enthusiast with an unquenchable thirst for learning and innovation.
+
+Get to know more about mine journey, my works, and explore potential collaborations!
