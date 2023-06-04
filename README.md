@@ -1,6 +1,6 @@
 # ArmanBehnam.github.io
 
-Welcome to the repository of my personal blog (https://armanbehnam.github.io/).
+Welcome to the repository of my personal blog (armanbehnam.github.io).
 
 I am an enterprising tech enthusiast with an unquenchable thirst for learning and innovation.
 
