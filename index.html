@@ -49,8 +49,66 @@ title: Arman Behnam's website
 	    }
 
 	  </style>
-	</head>
-
+	
+    .heading-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .book-heading {
+      padding: 10px;
+      background-color: #f2f2f2;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-right: 20px;
+    }
+    
+    .book-heading::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, rgba(255,255,255,0) 40%, rgba(255,255,255,0.4) 50%, rgba(255,255,255,0) 60%);
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+    
+    .book-heading:hover::after {
+      opacity: 1;
+    }
+    
+    .book-content {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s, max-height 0.5s;
+    }
+    
+    .book-content.show {
+      opacity: 1;
+      max-height: 1000px;
+      transition: opacity 0.5s, max-height 0.5s;
+    }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      $('.book-heading').click(function() {
+        $(this).next('.book-content').toggleClass('show');
+      });
+    });
+  </script>
+</head>
+<body>
+  <h1>My favourite</h1>
+  
+  <h2 class="book-heading">Books</h2>
+  <div class="book-content">
+    <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days, by Jules Verne</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo">The Count of Monte Cristo, by Alexandre Dumas and Auguste Maquet</a></p>
     <tr style="padding:0px">	
        <td style="padding:2.5%;width:63%;vertical-align:middle">
 
