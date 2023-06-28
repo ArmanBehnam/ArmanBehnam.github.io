@@ -31,14 +31,23 @@ title: Blog
     }
     
     .book-content {
-      display: none;
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: opacity 0.5s, max-height 0.5s;
+    }
+    
+    .book-content.show {
+      opacity: 1;
+      max-height: 1000px;
+      transition: opacity 0.5s, max-height 0.5s;
     }
   </style>
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
       $('.book-heading').click(function() {
-        $(this).next('.book-content').slideToggle();
+        $(this).next('.book-content').toggleClass('show');
       });
     });
   </script>
@@ -57,11 +66,18 @@ title: Blog
     <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a></p>
     <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a></p>
     <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/For_Whom_the_Bell_Tolls">For Whom the Bell Tolls, by by Ernest Hemingway</a></p>
     <p><a href="https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables">Les Misérables, by Victor Hugo</a></p>
     <p><a href="https://en.wikipedia.org/wiki/Five_Weeks_in_a_Balloon">Five Weeks in a Balloon, by Jules Verne</a></p>
     <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">Around the World in Eighty Days</a></p>
     <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">The Hunchback of Notre-Dame, by Victor Hugo</a></p>
+
 	  
   </div>
 
