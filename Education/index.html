@@ -1,27 +1,51 @@
----
-layout: default
-title: Education
----
-<div class="blurb">
-<div id="education">
-  <h2>Education</h2>
-  <ul>
-    <li>
-      <h3>Illinois Institute of Technology</h3>
-      <p>PhD in Computer Science, jan 2023 - Present</p>
-      <p>Research subject: Graph Neural Networks explanation by causal inference</p>
-    </li>
-    <li>
-      <h3>Iran University of Science and Technology</h3>
-      <p>Master's Degree in Industrial Science, Sep 2018 - Mar 2022</p>
-      <p>Overall GPA: 3.44, Dissertation title: “Railway data mining using deep learning with IoT approach”</p>
-    </li>
-    <li>
-      <h3>University of Tehran</h3>
-      <p>Bachelor's Degree in Industrial Engineering, Sep 2014 - Aug 2018</p>
-      <p>Major GPA: 3.17 / Overall GPA: 3.02, Bachelor thesis: Production planning Bachelor thesis at Tavan Gaz Co. Iran. </p>
-    </li>
-  </ul>
-</div>
+<style>
+  .education-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-bottom: 20px;
+  }
+  
+  .education-item img {
+    max-width: 300px;
+    height: auto;
+  }
 
+  .education-text {
+    flex-grow: 1;
+    padding-right: 20px;
+  }
+</style>
+
+<div class="blurb">
+  <div id="education">
+    <h2>Education</h2>
+    
+    <div class="education-item">
+      <div class="education-text">
+        <h3>Illinois Institute of Technology</h3>
+        <p>PhD in Computer Science, Jan 2023 - Present</p>
+        <p>Research subject: Graph Neural Networks explanation by causal inference</p>
+      </div>
+      <img src="images/Illinois Institute of Technology.jpg">
+    </div>
+
+    <div class="education-item">
+      <div class="education-text">
+        <h3>Iran University of Science and Technology</h3>
+        <p>Master's Degree in Industrial Science, Sep 2018 - Mar 2022</p>
+        <p>Overall GPA: 3.44, Dissertation title: “Railway data mining using deep learning with IoT approach”</p>
+      </div>
+      <img src="images/Iran University of Science and Technology.jpg">
+    </div>
+
+    <div class="education-item">
+      <div class="education-text">
+        <h3>University of Tehran</h3>
+        <p>Bachelor's Degree in Industrial Engineering, Sep 2014 - Aug 2018</p>
+        <p>Major GPA: 3.17 / Overall GPA: 3.02, Bachelor thesis: Production planning Bachelor thesis at Tavan Gaz Co. Iran.</p>
+      </div>
+      <img src="images/University of Tehran.jpg">
+    </div>
   </div>
+</div>
