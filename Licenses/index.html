@@ -4,7 +4,7 @@ title: Licenses & certifications
 ---
 <head>
   <style>
-    .book-heading {
+    .certification-heading {
       padding: 10px;
       background-color: #f2f2f2;
       border-radius: 5px;
@@ -12,7 +12,7 @@ title: Licenses & certifications
       margin-right: 20px;
     }
     
-    .book-heading::after {
+    .certification-heading::after {
       content: "";
       position: absolute;
       top: 0;
@@ -25,18 +25,18 @@ title: Licenses & certifications
       transition: opacity 0.3s;
     }
     
-    .book-heading:hover::after {
+    .certification-heading:hover::after {
       opacity: 1;
     }
     
-    .book-content {
+    .certification-content {
       opacity: 0;
       max-height: 0;
       overflow: hidden;
       transition: opacity 0.5s, max-height 0.5s;
     }
     
-    .book-content.show {
+    .certification-content.show {
       opacity: 1;
       max-height: 1500px;
       transition: opacity 0.5s, max-height 0.5s;
@@ -45,8 +45,8 @@ title: Licenses & certifications
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script>
     $(document).ready(function() {
-      $('.book-heading').click(function() {
-        $(this).next('.book-content').toggleClass('show');
+      $('.certification-heading').click(function() {
+        $(this).next('.certification-content').toggleClass('show');
       });
     });
   </script>
@@ -55,189 +55,84 @@ title: Licenses & certifications
   <h1>My Licenses & Certifications</h1>
   <p><b>Sharing Knowledge is a **sacred** job and I am enthusiastic about it</b>.</p>
 
-  <p>My Certifications are in 3 categorizes, Coursera specializations, Kaggle Notebooks, and Udemy licences.</p>
+  <p>My Certifications are in 3 categorizes, Coursera specializations, Kaggle Notebooks, and Udemy licences. Let's see my certifications in each filed of my work.</p>
 
-  <h2>My Licenses & Certifications</h2>
+  <h2></h2>
 
   <p><b>I believe in Fairness and Truth and don't believe in Time and Space</b>.</p>
-  <p>I am trying to learn how life works and help AI surpass <b>Logical Thinking</b>, <b>Decision Making</b>, and <b>Self-Consciousness</b>.</p>
+  <p>You can check this out too, <a href ="https://github.com/ArmanBehnam/Courses/tree/master/Coursera">from before</a>.</p>
 
   <h1>My favourite</h1>
   
   <div>
-    <h2 class="book-heading">Books</h2>
-    <div class="book-content">
+    <h2 class="certification-heading">Machine Learning</h2>
+    <div class="certification-content">
     <p><a href="https://en.wikipedia.org/wiki/Around_the_World_in_Eighty_Days">1. Around the World in Eighty Days, by Jules Verne</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo">2. The Count of Monte Cristo, by Alexandre Dumas and Auguste Maquet</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea">3. The Old Man and the Sea, by Ernest Hemingway</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn">4. Adventures of Huckleberry Finn, by Mark Twain</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Twenty_Thousand_Leagues_Under_the_Seas">5. Twenty Thousand Leagues Under the Sea, by Jules Verne</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Pride_and_Prejudice">6. Critique of Pure Reason, by Immanuel Kant</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Journey_to_the_Center_of_the_Earth">7. Critique of Practical Reason, by Immanuel Kant</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Little_Match_Girl">8. The Little Match Girl, by Hans Christian Andersen</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Emperor%27s_New_Clothes">9. The Emperor's New Clothes, by Hans Christian Andersen</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Wuthering_Heights">10. Wuthering Heights, by Emily Brontë</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/David_Copperfield">11. David Copperfield, by Charles Dickens</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/For_Whom_the_Bell_Tolls">12. For Whom the Bell Tolls, by by Ernest Hemingway</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Les_Mis%C3%A9rables">13. Les Misérables, by Victor Hugo</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Five_Weeks_in_a_Balloon">14. Five Weeks in a Balloon, by Jules Verne</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Blind_Owl">15. The Blind Owl, by Sadegh Hedayat</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Hunchback_of_Notre-Dame">16. The Hunchback of Notre-Dame, by Victor Hugo</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Philosopher%27s_Stone">17. Harry Potter and the Sorcerer's Stone, by by J. K. Rowling</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Blindness_(novel)">18. Blindness, by José Saramago</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/A_Tale_of_Two_Cities">19. A Tale of Two Cities, by Charles Dickens</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Adventures_of_Tom_Sawyer">20. The Adventures of Tom Sawyer, by Mark Twain</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows">21. Harry Potter and the Deathly Hallows, by J. K. Rowling</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Prince_and_the_Pauper">22. The Prince and the Pauper, by Mark Twain</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Picture_of_Dorian_Gray">23. The Picture of Dorian Gray, by Oscar Wilde</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Little_Prince">24. The Little Prince, by Antoine de Saint-Exupéry</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/White_Fang">25. White Fang, by Jack London</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Plague_(novel)">26. The Plague, by Albert Camus</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/The_Snow_Queen">27. The Snow Queen, by Hans Christian Andersen</a></p>
-    <p><a href="https://fa.wikipedia.org/wiki/%DA%86%D8%B1%D8%A7%D8%BA%E2%80%8C%D9%87%D8%A7_%D8%B1%D8%A7_%D9%85%D9%86_%D8%AE%D8%A7%D9%85%D9%88%D8%B4_%D9%85%DB%8C%E2%80%8C%DA%A9%D9%86%D9%85">28. ings We Left Unsaid, by Zoya Pirzad</a></p>
-    <p><a href="https://fa.wikipedia.org/wiki/%D8%B4%D9%88%D9%87%D8%B1_%D8%A2%D9%87%D9%88_%D8%AE%D8%A7%D9%86%D9%85">29. Showhar-e Ahou Khanom, by Ali Mohammad Afghani</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Pride_and_Prejudice">30. Pride and Prejudice, by Jane Austen</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Journey_to_the_Center_of_the_Earth">31. A Journey To The Centre of The Earth, by Jules Verne</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Discourse_on_the_Method">32. Discourse on Method, by René Descartes</a></p>
 
   </div>
   </div>
  <div>
-<h2 class="book-heading">Games</h2>
-  <div class="book-content">
-    <p><a href="https://www.rockstargames.com/reddeadredemption/">1. Red Dead Redemption 1 and 2, Video game</a></p>
-    <p><a href="https://www.ubisoft.com/en-us/game/watch-dogs/legion">2. Watch Dogs, Video game</a></p>    
-    <p><a href="https://www.ubisoft.com/en-us/game/assassins-creed">3. Assassin’s Creed II, Brotherhood, Revelations, III,Rogue, and Origins</a></p>
-    <p><a href="https://www.ea.com/games/fifa">4. FIFA, Video game series</a></p>
-    <p><a href="https://civilization.com/">5. Civilization VI, Video game</a></p>
-    <p><a href="https://www.rockstargames.com/gta-v">6. Grand Theft Auto Vice City, San Andreas, VI, and V</a></p>
-    <p><a href="https://www.playstation.com/en-us/god-of-war/">7. God of War, Video game series</a></p>
-    <p><a href="https://nba.2k.com/s">8. NBA 2K, series of basketball sports simulation video games</a></p>
-    <p><a href="https://supercell.com/en/games/clashofclans/">9. Clash of Clans, Mobile game</a></p>
-</div>
-  </div>
- <div>	
-<h2 class="book-heading">Foods</h2>
-  <div class="book-content">
-    <p><a href="https://en.wikipedia.org/wiki/Ghormeh_sabzi">Ghormeh sabzi, dish</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Kabab_koobideh">Kabab koobideh, dish</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Fesenj%C4%81n">Fesenjān, dish</a></p>
-    <p><a href="https://thecaspianchef.com/2020/01/18/zereshk-polo-saffron-barberry-rice-pilaf/">Zereshk Polo Morgh, dish</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Tahchin">Tahchin, dish</a></p>
-    <p><a href="https://persiangood.com/recipes/baghali-polo-ba-mahiche/">Baghali Polo Mahiche, dish</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Abgoosht">Abgoosht (Dizi), dish</a></p>
-    <p><a href="https://persiangood.com/recipes/beryani/">Isfahan Beryani, dish</a></p>
-    <p><a href="https://en.wikipedia.org/wiki/Gheimeh">Gheimeh, dish</a></p>
-    <p><a href="https://cooking.nytimes.com/recipes/1023445-dal-adas-spicy-red-lentil-tamarind-soup">Dal Adas, dish</a></p>
-    <p><a href="https://turmericsaffron.blogspot.com/2012/04/ghalieh-mahi-southern-iranian-spicy.html">Ghalieh Mahi, dish</a></p>
-    <p><a href="https://www.thedeliciouscrescent.com/baghali-ghatogh-beans-eggs/">Baghali ghatogh, dish</a></p>
-    <p><a href="https://lindseyeatsla.com/kashke-bademjan-persian-eggplant-dip/">Kashk bademjan, dish</a></p>
-    <p><a href="https://www.hamisharafi.com/free-recipes/sabzi-polo-ba-mahi">Sabzi Polo Mahi, dish</a></p>
-</div>
+
+   </div>
   </div>
   
  <div>	
-<h2 class="book-heading">Sports</h2>
-  <div class="book-content">
+    <h2 class="certification-heading">Data Science</h2>
+  <div class="certification-content">
+    <p><a href="https://www.imdb.com/title/tt0109830/?ref_=rt_li_tt">1. Forrest Gump, Robert Zemeckis 1994</a></p>
+
+</div>
+  </div>
+  
+  <div>	
+<h2 class="certification-heading">Natural Language Processing</h2>
+  <div class="certification-content">
     <p>1. Soccer</p>
-    <p>2. Basketball</p>
-    <p>3. Swimming</p>
-    <p>4. Biking</p>
-    <p>5. Tennis</p>
-    <p>6. Table Tennis</p>
+
+</div>
+  </div>
+  
+<h2 class="certification-heading">Internet of Things</h2>
+  <div class="certification-content">
+    <p><a href="https://www.rockstargames.com/reddeadredemption/">1. Red Dead Redemption 1 and 2, Video game</a></p>
 
 </div>
   </div>
  <div>	
-<h2 class="book-heading">Websites</h2>
-  <div class="book-content">
-    <p><a href="https://www.kaggle.com/">Kaggle, Data science company</a></p>
-    <p><a href="https://www.linkedin.com/">LinkedIn, Corporation Online service provider company</a></p>
-    <p><a href="https://www.imdb.com/">IMDb, online database of information related to films, television series, podcasts, home videos, video games, and streaming content online</a></p>
-    <p><a href="https://www.kaggle.com/">Google Colab, data analysis and machine learning tool</a></p>
-    <p><a href="https://www.kaggle.com/">Upwork, American freelancing platform</a></p>
-</div>
-  </div>
- <div>	
-<h2 class="book-heading">People</h2>
-  <div class="book-content">
-    <p><a href="https://www.britannica.com/biography/al-Farabi">Fārābī</a>, Persian Philosopher</p>
-    <p><a href="https://www.britannica.com/biography/Benjamin-Franklin">Benjamin Franklin</a>, Founding Father of the United States</p>
-    <p><a href="https://en.wikipedia.org/wiki/Immanuel_Kant">Immanuel Kant</a>, Philosopher</p>
-    <p><a href="https://www.biography.com/scholars-educators/rene-descartes">René Descartes</a>, French philosopher</p>
-    <p><a href="https://www.gatesnotes.com/">Bill Gates</a>, American business magnate</p>
-    <p><a href="https://www.britannica.com/biography/Niccolo-Machiavelli">Niccolò Machiavelli</a>, Italian statesman and writer</p>
-    <p><a href="https://www.investopedia.com/terms/k/karl-marx.asp">Karl Marx</a>, German philosopher</p>
-    <p><a href="https://en.wikipedia.org/wiki/Arthur_Schopenhauer">Arthur Schopenhauer</a>, German philosopher</p>
-    <p><a href="https://en.wikipedia.org/wiki/Arthur_Schopenhauer">Abraham Lincoln</a>, 16th U.S. President</p>
-    <p><a href="https://www.verywellmind.com/sigmund-freud-his-life-work-and-theories-2795860">Sigmund Freud</a>, Austrian neurologist</p>
-    <p><a href="https://www.britannica.com/biography/Theodore-Roosevelt">Theodore Roosevelt</a>, 26th U.S. President</p>
-    <p><a href="https://www.newworldencyclopedia.org/entry/Martin_Heidegger">Martin Heidegger</a>, German philosopher</p>
-    <p><a href="https://www.britannica.com/biography/Friedrich-Engels">Friedrich Engels</a>, German philosopher</p>
-    <p><a href="https://en.wikipedia.org/wiki/Sun_Tzu">Sun Tzu</a>, Chinese general</p>
-    <p><a href="https://www.newworldencyclopedia.org/entry/Friedrich_Nietzsche">Friedrich Nietzscher</a>, philosopher</p>
-    <p><a href="https://www.biography.com/scholars-educators/aristotle">Aristotle, </a>, Greek philosopher</p>
-    <p><a href="https://www.britannica.com/biography/Nasir-al-Din-al-Tusi">Naṣīr al-Dīn al-Ṭūsī, </a>, Persian scholar</p>
-    <p><a href="https://www.britannica.com/event/Meiji-Restoration">Emperor Meiji</a>, Former Emperor of Japan</p>
-    <p><a href="https://www.britannica.com/biography/Franklin-D-Roosevelt">Franklin D. Roosevelt</a>, 32nd U.S. President</p>
-    <p><a href="https://www.britannica.com/biography/Winston-Churchill">Winston Churchill</a>, Former Prime Minister of the United Kingdom</p>
-    <p><a href="https://www.britannica.com/biography/Mulla-Sadra">Mulla Sadra</a>, Persian islamic mystic</p>
-    <p><a href="https://www.britannica.com/biography/Taisho">Emperor Taishō</a>, Former Emperor of Japan</p>
-    <p><a href="https://www.britannica.com/biography/John-Adams-president-of-United-States">John Adams</a>, 2nd U.S. Presiden</p>
-    <p><a href="https://www.britannica.com/biography/Winston-Churchill">Winston Churchill</a>, Former Prime Minister of the United Kingdom</p>
-    <p><a href="https://www.normandy1944.info/home/commanders/life-and-death-of-heinrich-himmler">Heinrich Luitpold Himmler</a>, (Reichsführer of the Schutzstaffel), leading member of the Nazi Party of Germany</p>
-    <p><a href="https://www.britannica.com/biography/William-Shakespeare">William Shakespeare</a>, English author</p>
-    <p><a href="https://www.britannica.com/biography/Martin-Luther">Martin Luther</a>, German religious leader</p>
-    <p><a href="https://www.britannica.com/biography/Thomas-Jefferson">Thomas Jefferson</a>, 3rd U.S. President</p>
-    <p><a href="https://www.britannica.com/biography/Abu-Musa-Jabir-ibn-Hayyan">Abū Mūsā Jābir ibn Ḥayyān</a>, Persian alchemist</p>
-    <p><a href="https://www.britannica.com/biography/George-Washington">George Washington</a>, 1st U.S. President</p>
-    <p><a href="https://www.britannica.com/biography/Avicenna">Ibn Sina</a>, Persian Polymath</p>
-    <p><a href="https://www.britannica.com/biography/al-Biruni">al-Biruni</a>, Persian scholar</p>
-    <p><a href="https://www.britannica.com/biography/Leonardo-da-Vinci">Leonardo da Vinci</a>, Italian artist, engineer, and scientist</p>
-    <p><a href="https://www.britannica.com/biography/al-Razi">Abu Bakr al-Razi</a>, Persian physician</p>
-    <p><a href="https://www.britannica.com/biography/al-Khwarizmi">Muhammad ibn Musa al-Khwarizmi</a>, Persian mathematician</p>
-    <p><a href="https://en.wikipedia.org/wiki/Sun_Tzu">Kong Qiu</a>, (Confucius) Chinese philosopher</p>
-    <p><a href="https://en.wikipedia.org/wiki/Recep_Tayyip_Erdo%C4%9Fan">Recep Tayyip Erdoğan</a>, President of Türkiye</p>
-    <p><a href="https://www.britannica.com/biography/Omar-Khayyam-Persian-poet-and-astronomer">Omar Khayyam</a>, Persian poet and astronomer</p>
-    <p><a href="https://www.britannica.com/biography/John-Locke">John Locke</a>, English philosopher</p>
-    <p><a href="https://www.britannica.com/biography/Thomas-Hobbes">Thomas Hobbes</a>, English philosopher</p>
-    <p><a href="https://www.britannica.com/biography/Francis-Bacon-Viscount-Saint-Alban">Francis Bacon</a>, Former Lord High Chancellor of Great Britain</p>
+<h2 class="certification-heading">Blockchain</h2>
+  <div class="certification-content">
+    <p><a href="https://en.wikipedia.org/wiki/Ghormeh_sabzi">Ghormeh sabzi, dish</a></p>
+
 </div>
   </div>
   
  <div>	
-    <h2 class="book-heading">Movies</h2>
-  <div class="book-content">
+<h2 class="certification-heading">Recommender Systems</h2>
+  <div class="certification-content">
+    <p>1. Soccer</p>
+
+</div>
+  </div>
+ <div>	
+<h2 class="certification-heading">Reinforcement Learning</h2>
+  <div class="certification-content">
+    <p><a href="https://www.kaggle.com/">Kaggle, Data science company</a></p>
+
+</div>
+  </div>
+ <div>	
+<h2 class="certification-heading">Fintech</h2>
+  <div class="certification-content">
+    <p><a href="https://www.britannica.com/biography/al-Farabi">Fārābī</a>, Persian Philosopher</p>
+    
+</div>
+  </div>
+  
+ <div>	
+    <h2 class="certification-heading">Business</h2>
+  <div class="certification-content">
     <p><a href="https://www.imdb.com/title/tt0109830/?ref_=rt_li_tt">1. Forrest Gump, Robert Zemeckis 1994</a></p>
-    <p><a href="https://www.imdb.com/title/tt0062622/?ref_=rt_li_tt">2. 2001: A Space Odyssey, Stanley Kubrick 2001</a></p>    
-    <p><a href="https://www.imdb.com/title/tt0137523/?ref_=rt_li_tt">3. Fight Club, Brotherhood, David Fincher 1999</a></p>
-    <p><a href="https://www.imdb.com/title/tt0816692/?ref_=rt_li_tt">4. Interstellar, Christopher Nolan 2014</a></p>
-    <p><a href="https://www.imdb.com/title/tt0081505/?ref_=rt_li_tt">5. The Shining, Stanley Kubrick 1980</a></p>
-    <p><a href="https://www.imdb.com/title/tt0111161/?ref_=rt_li_tt">6. The Shawshank Redemption, Frank Darabont 1994</a></p>
-    <p><a href="https://www.imdb.com/title/tt1130884/?ref_=rt_li_tt">7. Shutter Island, Martin Scorsese 2010</a></p>
-    <p><a href="https://www.imdb.com/title/tt0071562/?ref_=rt_li_tt">8. The Godfather Part II, Francis Ford Coppola 1974</a></p>
-    <p><a href="https://www.imdb.com/title/tt0468569/?ref_=tt_sims_tt_t_2">9. The Dark Knight, Christopher Nolan 2008</a></p>
-    <p><a href="https://www.imdb.com/title/tt0108052/?ref_=rt_li_tt">10. Schindler's List, Steven Spielberg 1993</a></p>
-    <p><a href="https://www.imdb.com/title/tt0993846/?ref_=rt_li_tt">11. The Wolf of Wall Street, Martin Scorsese 2013</a></p>
-    <p><a href="https://www.imdb.com/title/tt0361748/?ref_=rt_li_tt">12. Inglourious Basterds, Quentin Tarantino 2009</a></p>
-    <p><a href="https://www.imdb.com/title/tt0050083/?ref_=rt_li_tt">13. 12 Angry Men, Sidney Lumet 1957</a></p>
-    <p><a href="https://www.imdb.com/title/tt0133093/?ref_=rt_li_tt">14. The Matrix, Lana Wachowski 1999</a></p>
-    <p><a href="https://www.imdb.com/title/tt0499549/?ref_=rt_li_tt">15. Avatar, James Cameron 2009</a></p>
-    <p><a href="https://www.imdb.com/title/tt0266697/?ref_=rt_li_tt">16. Kill Bill: Vol. 1, Quentin Tarantino 2003</a></p>
-    <p><a href="https://www.imdb.com/title/tt0338013/?ref_=rt_li_tt">17. Eternal Sunshine of the Spotless Mind, Michel Gondry 2004</a></p>
-    <p><a href="https://www.imdb.com/title/tt2024544/?ref_=rt_li_tt">18. 12 Years a Slave, Steve McQueen 2013</a></p>
-    <p><a href="https://www.imdb.com/title/tt0209144/?ref_=rt_li_tt">19. Memento, Christopher Nolan 2000</a></p>
-    <p><a href="https://www.imdb.com/title/tt0449088/?ref_=rt_li_tt">20. Pirates of the Caribbean: At World's End, Gore Verbinski 2007</a></p>
-    <p><a href="https://www.imdb.com/title/tt0119217/?ref_=rt_li_tt">21. Good Will Hunting, Gus Van Sant 1997</a></p>
-    <p><a href="https://www.imdb.com/title/tt0078788/?ref_=rt_li_tt">22. Apocalypse Now, Francis Ford Coppola 1979</a></p>
-    <p><a href="https://www.imdb.com/title/tt0169547/?ref_=rt_li_tt">23. American Beauty, Sam Mendes 1999</a></p>
-    <p><a href="https://www.imdb.com/title/tt0047478/?ref_=rt_li_tt">24. Seven Samurai, Akira Kurosawa 1954</a></p>
-    <p><a href="https://www.imdb.com/title/tt11286314/?ref_=rt_li_tt">25. Don't Look Up, Adam McKay 2021</a></p>
-    <p><a href="https://www.imdb.com/title/tt0027977/?ref_=rt_li_tt">26. Modern Times, Charles Chaplin 1936</a></p>
-    <p><a href="https://www.imdb.com/title/tt1345836/?ref_=rt_li_tt">27. The Dark Knight Rises, Christopher Nolan 2012</a></p>
-    <p><a href="https://www.imdb.com/title/tt0266543/?ref_=rt_li_tt">28. Finding Nemo, Andrew Stanton 2003</a></p>
-    <p><a href="https://www.imdb.com/title/tt4154796/?ref_=nm_flmg_t_19_act">29. Avengers: Endgame, Anthony Russo 2019</a></p>
-    <p><a href="https://www.imdb.com/title/tt3470600/?ref_=rt_li_tt">30. Sing, Garth Jennings 2016</a></p>
+
 </div>
   </div>
 </div><!-- /.blurb -->
