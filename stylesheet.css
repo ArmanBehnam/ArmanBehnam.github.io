@@ -142,3 +142,18 @@ p#namechange span#b {
 p#namechange:hover span#b {
   display: inline;
 }
+
+.shining-background {
+  background-image: linear-gradient(45deg, #ff0000, #ff9900, #ffff00, #00ff00, #00ffff, #0000ff, #9900ff);
+  background-size: 400% 400%;
+  animation: shining-animation 10s ease infinite;
+}
+
+@keyframes shining-animation {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
