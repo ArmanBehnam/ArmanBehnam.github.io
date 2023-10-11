@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Graph Visualization</title>
+    <style>
+        /* Add some basic styling */
+        figure {
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 2px 2px 12px #aaa;
+            width: fit-content;
+            margin: 20px auto;
+        }
+
+        figcaption {
+            margin-top: 20px;
+        }
+
+        .line-holder {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .letter, .desc, .eg {
+            margin: 5px;
+        }
+
+        .letter {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+<!-- The provided SVG and HTML goes here -->
+<figure><div id="graph-description" style="margin-bottom:0.25cm;"><svg><g><rect width="250" height="250" x="0" y="-10" rx="20" fill="#fff" stroke="#ddd" stroke-dasharray="4, 4" style="stroke-width: 2; stroke: rgb(221, 221, 221);"></rect><line class="vis" x1="220.00000000000003" x2="220.00000000000003" y1="120" y2="120" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="220.00000000000003" x2="150.90169943749473" y1="120" y2="24.894348370484632" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="220.00000000000003" y1="24.894348370484632" y2="120" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="150.90169943749473" y1="215.10565162951534" y2="215.10565162951534" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="39.09830056250526" y1="215.10565162951534" y2="178.77852522924732" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250526" x2="150.90169943749473" y1="178.77852522924732" y2="215.10565162951534" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250526" x2="39.09830056250526" y1="178.77852522924732" y2="178.77852522924732" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250526" x2="150.90169943749473" y1="178.77852522924732" y2="24.894348370484632" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="39.09830056250526" y1="24.894348370484632" y2="178.77852522924732" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250524" x2="39.09830056250524" y1="61.22147477075269" y2="61.22147477075269" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250524" x2="220.00000000000003" y1="61.22147477075269" y2="120" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="220.00000000000003" x2="39.09830056250524" y1="120" y2="61.22147477075269" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="150.90169943749473" y1="24.894348370484632" y2="24.894348370484632" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="150.90169943749473" y1="24.894348370484632" y2="215.10565162951534" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="150.90169943749473" y1="215.10565162951534" y2="24.894348370484632" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="150.90169943749473" x2="39.09830056250524" y1="24.894348370484632" y2="61.22147477075269" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="vis" x1="39.09830056250524" x2="150.90169943749473" y1="61.22147477075269" y2="24.894348370484632" style="stroke: rgb(187, 187, 187); stroke-width: 1px;"></line><line class="target" x1="220.00000000000003" x2="220.00000000000003" y1="120" y2="120" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="220.00000000000003" x2="150.90169943749473" y1="120" y2="24.894348370484632" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="220.00000000000003" y1="24.894348370484632" y2="120" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="150.90169943749473" y1="215.10565162951534" y2="215.10565162951534" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="39.09830056250526" y1="215.10565162951534" y2="178.77852522924732" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250526" x2="150.90169943749473" y1="178.77852522924732" y2="215.10565162951534" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250526" x2="39.09830056250526" y1="178.77852522924732" y2="178.77852522924732" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250526" x2="150.90169943749473" y1="178.77852522924732" y2="24.894348370484632" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="39.09830056250526" y1="24.894348370484632" y2="178.77852522924732" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250524" x2="39.09830056250524" y1="61.22147477075269" y2="61.22147477075269" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250524" x2="220.00000000000003" y1="61.22147477075269" y2="120" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="220.00000000000003" x2="39.09830056250524" y1="120" y2="61.22147477075269" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="150.90169943749473" y1="24.894348370484632" y2="24.894348370484632" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="150.90169943749473" y1="24.894348370484632" y2="215.10565162951534" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="150.90169943749473" y1="215.10565162951534" y2="24.894348370484632" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="150.90169943749473" x2="39.09830056250524" y1="24.894348370484632" y2="61.22147477075269" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><line class="target" x1="39.09830056250524" x2="150.90169943749473" y1="61.22147477075269" y2="24.894348370484632" style="stroke: rgba(0, 0, 0, 0); stroke-width: 20;"></line><circle r="10" cx="220.00000000000003" cy="120" style="fill: rgb(255, 255, 255); stroke-width: 1px; stroke: rgb(170, 170, 170);"></circle><circle r="10" cx="150.90169943749473" cy="215.10565162951534" style="fill: rgb(255, 255, 255); stroke-width: 1px; stroke: rgb(170, 170, 170);"></circle><circle r="10" cx="39.09830056250526" cy="178.77852522924732" style="fill: rgb(255, 255, 255); stroke-width: 1px; stroke: rgb(170, 170, 170);"></circle><circle r="10" cx="39.09830056250524" cy="61.22147477075269" style="fill: rgb(255, 255, 255); stroke-width: 1px; stroke: rgb(170, 170, 170);"></circle><circle r="10" cx="150.90169943749473" cy="24.894348370484632" style="fill: rgb(255, 255, 255); stroke-width: 1px; stroke: rgb(170, 170, 170);"></circle></g></svg><div class="line-holder"><div class="line-holder" id="V"><div class="letter">V</div><div class="desc">Vertex (or node) attributes</div><div class="eg">e.g., node identity, number of neighbors</div></div><div class="line-holder" id="E"><div class="letter">E</div><div class="desc">Edge (or link) attributes and directions</div><div class="eg">e.g., edge identity, edge weight</div></div><div class="line-holder" id="U"><div class="letter">U</div><div class="desc">Global (or master node) attributes</div><div class="eg">e.g., number of nodes, longest path</div></div></div></div>
+<figcaption>
+Three types of attributes we might find in a graph, hover over to highlight each attribute. Other types of graphs and attributes are explored in the <a href="#other-types-of-graphs-multigraphs-hypergraphs-hypernodes">Other types of graphs</a> section.
+</figcaption></figure>
+
+</body>
+</html>
