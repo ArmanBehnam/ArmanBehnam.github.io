@@ -82,14 +82,14 @@ tr,
 p,
 a {
   font-family: 'Inter', 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.7;
   font-weight: 400;
   letter-spacing: -0.01em;
 }
 
 p {
-  font-size: 15px;
+  font-size: 14px;
   line-height: 1.7;
   color: #2d3748;
   font-weight: 400;
