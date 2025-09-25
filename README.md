@@ -7,7 +7,8 @@
 
 ## About
 
-Founding Researcher at a stealth startup pioneering **GNN-powered search technologies**. My research focuses on pushing the boundaries of Graph Neural Networks and **causal representation learning**, with breakthrough methods published at top-tier venues including **ECCV** and **NeurIPS**.
+I'm a <b>third year CS PhD student</b> at Illinois Institute of Technology (IIT). I am fortunate to be advised by <a href="http://wangbinghui.net/">Dr. Binghui Wang</a>, as a CS research scientist at IIT.
+ Founding Researcher at a Quis.Inc startup pioneering **GNN-powered search technologies**. My research focuses on pushing the boundaries of Graph Neural Networks and **causal representation learning**, with breakthrough methods published at top-tier venues including **ECCV** and **NeurIPS**.
 
 ## Research Interests
 
