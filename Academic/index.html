@@ -2,42 +2,262 @@
 layout: default
 title: Academic Experience
 ---
-<br>
-<div class="blurb">
-  <div id="Academic">
-    <h2>Academic Experience</h2>
-    
-    <div class="Academic-item">
-      <div class="Academic-text">
-        <h3>AI Research Scientist Intern at <a href="https://www.mayo.edu/research/departments-divisions/artificial-intelligence-informatics/overview">the Department of Artificial Intelligence and Informatics</a></h3>
-        <p>Mayo Clinic, May 2024 - August 2024</p>
-        <p>Research goal: <b>Clinical Neural Network Generative Explanation</b> Problem Definition, and  Analyze Data to Find a Reason for a Change in the Graph Label </p>
-      </div>
+
+<style>
+.academic-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.academic-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.academic-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #00008B;
+    margin-bottom: 10px;
+}
+
+.academic-timeline {
+    position: relative;
+    margin: 40px 0;
+}
+
+.academic-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 35px 35px 35px 25px;
+    border-left: 6px solid transparent;
+    background-image: linear-gradient(white, white), linear-gradient(135deg, #87CEFA, #00008B);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    box-shadow: 0 4px 15px rgba(135, 206, 250, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: 20px;
+}
+
+.academic-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #87CEFA, #00008B);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.academic-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(135, 206, 250, 0.2);
+}
+
+.academic-item:hover::before {
+    transform: scaleX(1);
+}
+
+.position-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.position-title {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #00008B;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.position-duration {
+    background: linear-gradient(135deg, #87CEFA, #00008B);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.institution {
+    font-size: 1.1em;
+    color: #333;
+    margin: 8px 0 15px 0;
+    font-weight: 500;
+}
+
+.position-type {
+    display: inline-block;
+    background: rgba(135, 206, 250, 0.2);
+    color: #00008B;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+.description {
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.responsibilities {
+    background: rgba(135, 206, 250, 0.05);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #87CEFA;
+}
+
+.responsibilities-title {
+    font-weight: 600;
+    color: #00008B;
+    margin-bottom: 8px;
+    font-size: 0.95em;
+}
+
+.responsibilities-list {
+    color: #555;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .academic-item {
+        padding: 30px 30px 30px 40px;
+        margin-bottom: 25px;
+    }
+
+    .position-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .position-title {
+        font-size: 1.2em;
+    }
+}
+</style>
+
+<div class="academic-container">
+    <div class="academic-header">
+        <h1 class="academic-title">Academic Experience</h1>
     </div>
-<br>
-    <br>
-    <div class="Academic-item">
-      <div class="Academic-text">
-        <h3>Grading programming assignments, and the final project</h3>
-        <p>Teaching Assistant, Jan 2023 - Present</p>
-        <p><b>Introduction to Data Structures by Java</b>CS401, <b>Data privacy and security</b> CS528, and <b>Multiple Variables Statistical Analysis</b> IE210 course</p>
-      </div>
+
+    <div class="academic-timeline">
+
+        <div class="academic-item">
+            <div class="position-header">
+                <h3 class="position-title">AI Research Scientist</h3>
+                <div class="position-duration">May 2024 - Aug 2024</div>
+            </div>
+            <div class="institution">
+                <a href="https://www.mayo.edu/research/departments-divisions/artificial-intelligence-informatics/overview">Department of Artificial Intelligence and Informatics, Mayo Clinic</a>
+            </div>
+            <div class="position-type">Full-time Internship</div>
+            <div class="description">
+                Research internship focused on developing Graph Neural Network methodologies for clinical applications in Alzheimer's disease research.
+            </div>
+            <div class="responsibilities">
+                <div class="responsibilities-title">Key Contributions:</div>
+                <div class="responsibilities-list">
+                    Developed causal explanation framework for Mild Cognitive Impairment progression using GNNs • Collaborated with world-renowned expert Dr. Ronald C. Petersen • Published research findings at IEEE BIBM 2024 • Applied temporal patient data analysis including chronic diseases, biomarkers, and genetic information
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-item">
+            <div class="position-header">
+                <h3 class="position-title">Teaching Assistant</h3>
+                <div class="position-duration">Jan 2023 - Present</div>
+            </div>
+            <div class="institution">Illinois Institute of Technology, Department of Computer Science</div>
+            <div class="position-type">Graduate Assistantship</div>
+            <div class="description">
+                Supporting undergraduate and graduate courses through grading, mentoring, and educational assistance.
+            </div>
+            <div class="responsibilities">
+                <div class="responsibilities-title">Courses Supported:</div>
+                <div class="responsibilities-list">
+                    <strong>CS401:</strong> Introduction to Data Structures (Java) • <strong>CS528:</strong> Data Privacy and Security • Programming assignments evaluation and final project assessment • Student mentoring and office hours
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-item">
+            <div class="position-header">
+                <h3 class="position-title">Editorial Board Member</h3>
+                <div class="position-duration">Sep 2022 - Present</div>
+            </div>
+            <div class="institution">
+                <a href="https://journals.sagepub.com/editorial-board/AJL">American Journal of Lifestyle Medicine</a>, SAGE Publications
+            </div>
+            <div class="position-type">Editorial Service</div>
+            <div class="description">
+                Contributing to peer review process and editorial decisions for interdisciplinary research at the intersection of lifestyle medicine and data science.
+            </div>
+            <div class="responsibilities">
+                <div class="responsibilities-title">Responsibilities:</div>
+                <div class="responsibilities-list">
+                    Manuscript review and evaluation • Editorial oversight for AI/ML applications in healthcare • Contributing expertise in computational approaches to lifestyle medicine research
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-item">
+            <div class="position-header">
+                <h3 class="position-title">Peer Reviewer</h3>
+                <div class="position-duration">Jan 2022 - Present</div>
+            </div>
+            <div class="institution">
+                Multiple High-Impact Journals
+            </div>
+            <div class="position-type">Review Service</div>
+            <div class="description">
+                Providing expert peer review for leading publications in healthcare, AI, and interdisciplinary research.
+            </div>
+            <div class="responsibilities">
+                <div class="responsibilities-title">Publications Reviewed:</div>
+                <div class="responsibilities-list">
+                    <a href="https://www.springer.com/journal/11606/">Journal of General Internal Medicine</a> • <a href="https://www.springer.com/journal/10935/">The Journal of Primary Prevention</a> • <a href="https://www.webofscience.com/wos/author/record/2359633">View complete review record</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="academic-item">
+            <div class="position-header">
+                <h3 class="position-title">Data Science Lecturer</h3>
+                <div class="position-duration">Nov 2018 - Nov 2019</div>
+            </div>
+            <div class="institution">
+                <a href="http://www.jdevs.ir/Home/EnIndex">Jahad-Daneshgahi</a>, Tehran, Iran
+            </div>
+            <div class="position-type">Contract Position</div>
+            <div class="description">
+                Founded and delivered Iran's first comprehensive Deep Learning/Neural Network educational program, pioneering AI education in the region.
+            </div>
+            <div class="responsibilities">
+                <div class="responsibilities-title">Teaching Portfolio:</div>
+                <div class="responsibilities-list">
+                    200+ hours of instruction in Machine Learning and Data Mining • Python and R programming languages • Curriculum development for emerging AI technologies • Student mentorship and career guidance
+                </div>
+            </div>
+        </div>
+
     </div>
-<br>
-<br>
-    <div class="Academic-item">
-      <div class="Academic-text">
-        <h3><a href="https://journals.sagepub.com/editorial-board/AJL">Editorial Board</a></h3>
-        <p>American Journal of Lifestyle Medicine, SAGE Journals, Sep 2022 - Present</p>
-      </div>
-    </div>
-<br>
-<br>
-    <div class="Academic-item">
-      <div class="Academic-text">
-        <h3><a href="https://www.webofscience.com/wos/author/record/2359633">Peer Reviewer</a></h3>
-        <p>Journal of General Internal Medicine, and The Journal of Primary Prevention, Jan 2022 - Present</p>
-      </div>
-    </div>
-  </div>
 </div>
