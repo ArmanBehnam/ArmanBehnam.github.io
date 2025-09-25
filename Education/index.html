@@ -2,40 +2,345 @@
 layout: default
 title: Education
 ---
-<br>
-<div class="blurb">
-  <div id="education">
-    <h2>Education</h2>
-    
-    <div class="education-item">
-      <div class="education-text">
-        <h3>Illinois Institute of Technology</h3>
-<img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/Illinois%20Institute%20of%20Technology.jpg" style="float:right;" width="300px">
-        <p>Ph.D student in Computer Science, Jan 2023 - Present</p>
-        <p>Research subject: Causal Representation Learning for Out-of-Distribution Data</p>
-        <p><b>GPA: 3.00</b>, Advisor: <a href="http://wangbinghui.net/">Binghui Wang</a></p>
-        <p>Relevant coursework: Computer Organization and Assembly Language Programming, Systems Programming, Science of Programming, Software Systems Architectures, Algorithms, and Operating Systems</p>
-      </div>
+
+<style>
+.education-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.education-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.education-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #00008B;
+    margin-bottom: 10px;
+}
+
+.education-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 35px 35px 35px 35px;
+    border-left: 6px solid #87CEFA;
+    box-shadow: 0 4px 15px rgba(135, 206, 250, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.education-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #87CEFA, #00008B);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.education-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(135, 206, 250, 0.2);
+}
+
+.education-item:hover::before {
+    transform: scaleX(1);
+}
+
+.education-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.education-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.institution-name {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #00008B;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.degree-info {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 15px;
+    font-weight: 500;
+}
+
+.duration {
+    background: linear-gradient(135deg, #87CEFA, #00008B);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.institution-logo {
+    flex-shrink: 0;
+}
+
+.institution-logo img {
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid rgba(135, 206, 250, 0.2);
+    padding: 8px;
+    background: white;
+}
+
+.education-details {
+    display: grid;
+    gap: 15px;
+}
+
+.detail-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.detail-item {
+    background: rgba(135, 206, 250, 0.05);
+    padding: 15px 20px;
+    border-radius: 12px;
+    border-left: 4px solid #87CEFA;
+    flex: 1;
+    min-width: 250px;
+}
+
+.detail-label {
+    font-weight: 600;
+    color: #00008B;
+    font-size: 0.9em;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.detail-value {
+    color: #333;
+    font-size: 0.95em;
+    line-height: 1.5;
+}
+
+.academic-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    margin: 30px 0;
+    padding: 25px;
+    background: rgba(135, 206, 250, 0.05);
+    border-radius: 12px;
+    border: 1px solid rgba(135, 206, 250, 0.2);
+}
+
+.academic-button {
+    display: inline-block;
+    background: linear-gradient(135deg, #87CEFA, #00008B);
+    color: white;
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 25px;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 8px rgba(135, 206, 250, 0.3);
+}
+
+.academic-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(135, 206, 250, 0.4);
+    border-color: rgba(255, 255, 255, 0.3);
+    color: white;
+    text-decoration: none;
+}
+
+.research-focus {
+    background: rgba(0, 0, 139, 0.03);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(0, 0, 139, 0.1);
+    margin-top: 15px;
+}
+
+.research-title {
+    font-weight: 600;
+    color: #00008B;
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.research-description {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+.coursework {
+    background: rgba(135, 206, 250, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid rgba(135, 206, 250, 0.2);
+    margin-top: 15px;
+}
+
+.coursework-title {
+    font-weight: 600;
+    color: #00008B;
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.coursework-list {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .education-item {
+        padding: 30px 30px 30px 30px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+    }
+
+    .education-header-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .education-info {
+        min-width: unset;
+    }
+
+    .institution-logo {
+        align-self: center;
+    }
+
+    .detail-row {
+        flex-direction: column;
+    }
+
+    .detail-item {
+        min-width: unset;
+    }
+
+    .institution-name {
+        font-size: 1.2em;
+    }
+}
+</style>
+
+<div class="education-container">
+    <div class="education-header">
+        <h1 class="education-title">Education</h1>
+
+        <div class="academic-buttons">
+            <a href="https://github.com/ArmanBehnam/ArmanBehnam.github.io/raw/main/resume/Sep_2025_Academic.pdf" class="academic-button">My CV</a>
+            <a href="https://scholar.google.com/citations?user=KgzHjgMAAAAJ&hl=en&oi=ao" class="academic-button">Google Scholar</a>
+            <a href="https://www.researchgate.net/profile/Arman-Behnam" class="academic-button">ResearchGate</a>
+            <a href="https://openreview.net/profile?id=%7EArman_Behnam1" class="academic-button">OpenReview</a>
+        </div>
     </div>
-<br>
-    <br>
+
     <div class="education-item">
-      <div class="education-text">
-        <h3>Iran University of Science and Technology</h3>
-<img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/Iran%20University%20of%20Science%20and%20Technology.jpg" style="float:right;" width="300px">
-        <p>M.Sc. in Industrial Engineering, Sep 2018 - Mar 2022</p>
-        <p><b>GPA: 3.44</b>, Dissertation title: “Railway data mining using deep learning with IoT approach”</p>
-      </div>
+        <div class="education-header-section">
+            <div class="education-info">
+                <h3 class="institution-name">Illinois Institute of Technology</h3>
+                <div class="degree-info">Ph.D. in Computer Science</div>
+                <div class="duration">Jan 2023 - Present</div>
+            </div>
+            <div class="institution-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/Illinois%20Institute%20of%20Technology.jpg" alt="IIT Logo">
+            </div>
+        </div>
+
+        <div class="education-details">
+            <div class="detail-item">
+                <div class="detail-label">Advisor</div>
+                <div class="detail-value"><a href="http://wangbinghui.net/">Dr. Binghui Wang</a></div>
+            </div>
+        </div>
+
+        <div class="research-focus">
+            <div class="research-title">Research Focus</div>
+            <div class="research-description">
+                <strong>Generalized Causal Representation Learning</strong> - Developing theoretical frameworks for understanding cause-and-effect relationships in machine learning systems, with applications to out-of-distribution generalization and robust AI.
+            </div>
+        </div>
+
+        <div class="coursework">
+            <div class="coursework-title">Relevant Coursework</div>
+            <div class="coursework-list">
+                Computer Organization and Assembly Language Programming • Systems Programming • Science of Programming • Software Systems Architectures • Cryptography • Machine Learning • Algorithms • Operating Systems
+            </div>
+        </div>
     </div>
-<br>
-<br>
+
     <div class="education-item">
-      <div class="education-text">
-        <h3>University of Tehran</h3>
-<img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/University%20of%20Tehran.jpg" style="float:right;" width="300px">
-        <p>B.Sc. in Industrial Engineering, Sep 2014 - Aug 2018</p>
-        <p><b>GPA: 3.17</b>, Bachelor thesis: "Integrating modern tools for long-term production planning" at Tavan Gaz Co. Iran.</p>
-      </div>
+        <div class="education-header-section">
+            <div class="education-info">
+                <h3 class="institution-name">Iran University of Science and Technology</h3>
+                <div class="degree-info">M.Sc. in Industrial Engineering</div>
+                <div class="duration">Sep 2018 - Mar 2022</div>
+            </div>
+            <div class="institution-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/Iran%20University%20of%20Science%20and%20Technology.jpg" alt="IUST Logo">
+            </div>
+        </div>
+
+        <div class="research-focus">
+            <div class="research-title">Master's Dissertation</div>
+            <div class="research-description">
+                <strong>"Railway data mining using deep learning with IoT approach"</strong> - Applied advanced machine learning techniques and Internet of Things technologies to optimize transportation systems and railway operations.
+            </div>
+        </div>
     </div>
-  </div>
+
+    <div class="education-item">
+        <div class="education-header-section">
+            <div class="education-info">
+                <h3 class="institution-name">University of Tehran</h3>
+                <div class="degree-info">B.Sc. in Industrial Engineering</div>
+                <div class="duration">Sep 2014 - Jul 2018</div>
+            </div>
+            <div class="institution-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/1d83a25460fc1efd557fe0d61427a2515a75300e/images/University%20of%20Tehran.jpg" alt="UT Logo">
+            </div>
+        </div>
+
+        <div class="research-focus">
+            <div class="research-title">Bachelor's Thesis</div>
+            <div class="research-description">
+                <strong>"Integrating modern tools for long-term production planning"</strong> at Tavan Gaz Co. Iran - Developed industrial optimization methodologies and production planning frameworks for energy sector applications.
+            </div>
+        </div>
+    </div>
 </div>
