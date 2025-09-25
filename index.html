@@ -129,38 +129,35 @@ margin-top: 0;
                 <p>I serve on the <b>Editorial Board</b> of the <a href="https://journals.sagepub.com/editorial-board/AJL">American Journal of Lifestyle Medicine</a> and regularly review for leading publications including <a href="https://jamanetwork.com/journals/jamanetworkopen/">JAMA Network Open</a>, <a href="https://www.springer.com/journal/11606/">Journal of General Internal Medicine</a>, and <a href="https://www.springer.com/journal/10935/">The Journal of Primary Prevention</a>.</p>
 
 
-				<!-- Updates Section - Insert before buttons -->
-<div class="updates-section">
+
+				<div class="updates-section">
     <div class="updates-header">
         <h2 class="updates-title">Latest Updates</h2>
         <div class="pulse-dot"></div>
     </div>
 
-    <div class="updates-container">
-        <div class="update-card new">
-            <div class="update-badge">New</div>
+    <div class="updates-timeline">
+        <div class="update-item new">
             <div class="update-date">Sep 2025</div>
-            <div class="update-content">
-                <h3>NeurIPS 2025 Paper Accepted!</h3>
-                <p>Our paper "Measure-Theoretic Anti-Causal Representation Learning" has been accepted to NeurIPS 2025</p>
+            <div class="update-badge">NEW</div>
+            <div class="update-text">
+                <strong>NeurIPS 2025 Paper Accepted!</strong> - "Measure-Theoretic Anti-Causal Representation Learning"
             </div>
             <div class="update-icon">🎉</div>
         </div>
 
-        <div class="update-card">
+        <div class="update-item">
             <div class="update-date">Aug 2025</div>
-            <div class="update-content">
-                <h3>New Position</h3>
-                <p>Started as Founding Researcher at stealth startup focusing on GNN-powered search technologies</p>
+            <div class="update-text">
+                <strong>New Position</strong> - Started as Founding Researcher at stealth startup focusing on GNN-powered search technologies
             </div>
             <div class="update-icon">🚀</div>
         </div>
 
-        <div class="update-card">
+        <div class="update-item">
             <div class="update-date">Jul 2024</div>
-            <div class="update-content">
-                <h3>ECCV 2024</h3>
-                <p>Published breakthrough GNN causal explanation method at European Conference on Computer Vision</p>
+            <div class="update-text">
+                <strong>ECCV 2024</strong> - Published breakthrough GNN causal explanation method
             </div>
             <div class="update-icon">📄</div>
         </div>
@@ -169,268 +166,146 @@ margin-top: 0;
 
 <style>
 .updates-section {
-    margin: 40px 0;
-    background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(135, 206, 250, 0.05),
-        rgba(0, 0, 139, 0.05)
-    );
-    border-radius: 24px;
-    padding: 35px 25px;
-    position: relative;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(135, 206, 250, 0.2);
-    box-shadow:
-        0 8px 32px rgba(135, 206, 250, 0.1),
-        inset 0 1px 0 rgba(255, 255, 255, 0.2);
-}
-
-.updates-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 2px;
-    background: linear-gradient(90deg,
-        transparent,
-        #87CEFA,
-        #00008B,
-        #87CEFA,
-        transparent
-    );
-    animation: shimmer 3s ease-in-out infinite;
-}
-
-@keyframes shimmer {
-    0%, 100% { opacity: 0.5; }
-    50% { opacity: 1; }
+    margin: 30px 0;
+    background: rgba(255, 255, 255, 0.7);
+    border-radius: 12px;
+    padding: 25px;
+    border: 1px solid rgba(135, 206, 250, 0.3);
+    box-shadow: 0 4px 15px rgba(135, 206, 250, 0.1);
 }
 
 .updates-header {
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-bottom: 30px;
+    gap: 10px;
+    margin-bottom: 20px;
     justify-content: center;
 }
 
 .updates-title {
-    font-size: 1.8em;
-    font-weight: 700;
-    background: linear-gradient(135deg, #00008B, #87CEFA, #00008B);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    font-size: 1.4em;
+    font-weight: 600;
+    color: #00008B;
     margin: 0;
-    letter-spacing: -0.5px;
 }
 
 .pulse-dot {
-    width: 12px;
-    height: 12px;
+    width: 8px;
+    height: 8px;
     background: #00ff00;
     border-radius: 50%;
     animation: pulse 2s infinite;
-    box-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
 }
 
 @keyframes pulse {
-    0%, 100% {
-        transform: scale(1);
-        opacity: 1;
-    }
-    50% {
-        transform: scale(1.2);
-        opacity: 0.7;
-    }
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
 }
 
-.updates-container {
-    display: grid;
-    gap: 20px;
-    grid-template-columns: 1fr;
+.updates-timeline {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-.update-card {
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 16px;
-    padding: 24px;
-    position: relative;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    border: 1px solid rgba(135, 206, 250, 0.2);
-    overflow: hidden;
+.update-item {
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas:
-        "date content icon"
-        "badge content icon";
+    grid-template-columns: 80px auto 1fr 30px;
     gap: 15px;
-    align-items: start;
+    align-items: center;
+    padding: 12px 15px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    border-left: 3px solid #87CEFA;
+    transition: all 0.2s ease;
+    min-height: 50px;
 }
 
-.update-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #87CEFA, #00008B);
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.3s ease;
-}
-
-.update-card:hover::before {
-    transform: scaleX(1);
-}
-
-.update-card:hover {
-    transform: translateY(-4px);
-    box-shadow:
-        0 12px 40px rgba(135, 206, 250, 0.2),
-        0 4px 16px rgba(0, 0, 139, 0.1);
+.update-item:hover {
     background: rgba(255, 255, 255, 0.95);
+    transform: translateX(5px);
+    box-shadow: 0 3px 10px rgba(135, 206, 250, 0.2);
 }
 
-.update-card.new {
-    background: linear-gradient(135deg,
-        rgba(255, 255, 255, 0.95),
-        rgba(135, 206, 250, 0.05)
-    );
-    border-color: rgba(0, 255, 0, 0.3);
+.update-item.new {
+    border-left-color: #00ff00;
+    background: linear-gradient(90deg, rgba(0, 255, 0, 0.05), rgba(255, 255, 255, 0.8));
+}
+
+.update-date {
+    font-size: 0.75em;
+    color: #666;
+    font-weight: 600;
+    text-align: center;
+    background: rgba(135, 206, 250, 0.1);
+    padding: 4px 8px;
+    border-radius: 12px;
+    white-space: nowrap;
+}
+
+.update-badge {
+    background: linear-gradient(135deg, #00ff00, #00cc00);
+    color: white;
+    font-size: 0.6em;
+    font-weight: 700;
+    padding: 3px 6px;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    width: fit-content;
     animation: glow 2s ease-in-out infinite alternate;
 }
 
 @keyframes glow {
-    from {
-        box-shadow:
-            0 4px 20px rgba(135, 206, 250, 0.2),
-            0 0 20px rgba(0, 255, 0, 0.1);
-    }
-    to {
-        box-shadow:
-            0 6px 30px rgba(135, 206, 250, 0.3),
-            0 0 30px rgba(0, 255, 0, 0.2);
-    }
+    from { box-shadow: 0 0 5px rgba(0, 255, 0, 0.3); }
+    to { box-shadow: 0 0 10px rgba(0, 255, 0, 0.6); }
 }
 
-.update-badge {
-    grid-area: badge;
-    background: linear-gradient(135deg, #00ff00, #00cc00);
-    color: white;
-    font-size: 0.7em;
-    font-weight: 700;
-    padding: 4px 8px;
-    border-radius: 12px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    box-shadow: 0 2px 8px rgba(0, 255, 0, 0.3);
-    width: fit-content;
-    animation: bounce 2s ease-in-out infinite;
+.update-text {
+    font-size: 0.9em;
+    color: #333;
+    line-height: 1.4;
 }
 
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {
-        transform: translateY(0);
-    }
-    40% {
-        transform: translateY(-3px);
-    }
-    60% {
-        transform: translateY(-2px);
-    }
-}
-
-.update-date {
-    grid-area: date;
-    font-size: 0.8em;
-    color: #666;
-    font-weight: 600;
-    background: rgba(135, 206, 250, 0.1);
-    padding: 6px 12px;
-    border-radius: 20px;
-    border: 1px solid rgba(135, 206, 250, 0.2);
-    white-space: nowrap;
-    width: fit-content;
-}
-
-.update-content {
-    grid-area: content;
-}
-
-.update-content h3 {
-    margin: 0 0 8px 0;
-    font-size: 1.1em;
-    font-weight: 700;
+.update-text strong {
     color: #00008B;
-    line-height: 1.3;
-}
-
-.update-content p {
-    margin: 0;
-    color: #555;
-    line-height: 1.5;
-    font-size: 0.95em;
+    font-weight: 600;
 }
 
 .update-icon {
-    grid-area: icon;
-    font-size: 1.5em;
+    font-size: 1.2em;
     opacity: 0.7;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
-.update-card:hover .update-icon {
+.update-item:hover .update-icon {
     opacity: 1;
-    transform: scale(1.1) rotate(5deg);
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
     .updates-section {
-        padding: 25px 20px;
-        margin: 30px 0;
+        padding: 20px 15px;
+        margin: 20px 0;
     }
 
-    .update-card {
+    .update-item {
         grid-template-columns: 1fr;
         grid-template-areas:
-            "date"
-            "badge"
-            "content"
-            "icon";
+            "date badge"
+            "text text"
+            "icon icon";
+        gap: 8px;
         text-align: center;
-        gap: 12px;
     }
 
-    .update-date, .update-badge {
-        justify-self: center;
-    }
+    .update-date { grid-area: date; justify-self: start; }
+    .update-badge { grid-area: badge; justify-self: end; }
+    .update-text { grid-area: text; }
+    .update-icon { grid-area: icon; }
 
     .updates-title {
-        font-size: 1.5em;
-    }
-}
-
-@media (min-width: 1024px) {
-    .updates-container {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    }
-
-    .update-card {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-            "date"
-            "badge"
-            "content"
-            "icon";
-        text-align: center;
-    }
-
-    .update-date, .update-badge {
-        justify-self: center;
+        font-size: 1.2em;
     }
 }
 </style>
