@@ -2,82 +2,337 @@
 layout: default
 title: Work Experience
 ---
-<br>
-<div class="blurb">
-  <div id="work-experience">
-    <h2>Work Experience</h2>
 
-      <div class="experience-item">
-  <div class="experience-text">
-    <h3><a href="https://jarvisnetwork-staging.web.app/">Quis.Inc Startup</a></h3>
-   <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/quis.jpg" style="float:right;" width="200px">
-    <p>Founding Researcher, July 2025 - Present</p>
-    <p>Location: Chicago, IL, USA</p>
-    <p><b>Full-time</b></p>
-    <p>Pioneering <b>GNN-powered search technologies</b>. Leading research on Graph Neural Networks with breakthrough methods that have outperformed all state-of-the-art approaches in GNN explanation, published at top-tier venues including ECCV and NeurIPS.</p>
-  </div>
-</div>
-<br>
+<style>
+.work-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-    <div class="experience-item">
-      <div class="experience-text">
-        <h3><a href="https://www.clarkdietrich.com/">Clarkwestern Dietrich Building Systems LLC</a></h3>
-        <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/clark.jpg" style="float:right;" width="300px">
-        <p>AI Engineering Internship, May 2025 - August 2025</p>
-        <p>Location: Merrillville, IN, USA</p>
-        <p><b>Internship</b></p>
-            <p>Multi-agentic AI agents to leverages OCR, and LLM-based Q&A to extract engineering parameters from unstructured documents, transforming them into structured JSON via inferential reasoning algorithms.</p>
-      </div>
+.work-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.work-title {
+    font-size: 2.2em;
+    font-weight: 700;
+    color: #00008B;
+    margin-bottom: 10px;
+}
+
+.work-item {
+    position: relative;
+    margin-bottom: 30px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 12px;
+    padding: 35px 35px 35px 35px;
+    border-left: 6px solid #87CEFA;
+    box-shadow: 0 4px 15px rgba(135, 206, 250, 0.1);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    margin-left: 15px;
+}
+
+.work-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, #87CEFA, #00008B);
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+}
+
+.work-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 25px rgba(135, 206, 250, 0.2);
+}
+
+.work-item:hover::before {
+    transform: scaleX(1);
+}
+
+.work-header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.work-info {
+    flex: 1;
+    min-width: 300px;
+}
+
+.company-name {
+    font-size: 1.3em;
+    font-weight: 700;
+    color: #00008B;
+    margin: 0 0 10px 0;
+    line-height: 1.3;
+}
+
+.position-title {
+    font-size: 1.1em;
+    color: #333;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.work-duration {
+    background: linear-gradient(135deg, #87CEFA, #00008B);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.85em;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 8px;
+}
+
+.work-location {
+    color: #666;
+    font-size: 0.9em;
+    margin-bottom: 8px;
+}
+
+.work-type {
+    background: rgba(135, 206, 250, 0.2);
+    color: #00008B;
+    padding: 4px 10px;
+    border-radius: 15px;
+    font-size: 0.8em;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.company-logo {
+    flex-shrink: 0;
+}
+
+.company-logo img {
+    width: 140px;
+    height: 140px;
+    object-fit: contain;
+    border-radius: 12px;
+    border: 2px solid rgba(135, 206, 250, 0.2);
+    padding: 8px;
+    background: white;
+}
+
+.work-description {
+    background: rgba(135, 206, 250, 0.05);
+    padding: 20px;
+    border-radius: 12px;
+    border-left: 4px solid #87CEFA;
+    margin-top: 15px;
+}
+
+.work-description-title {
+    font-weight: 600;
+    color: #00008B;
+    margin-bottom: 12px;
+    font-size: 1em;
+}
+
+.work-description-text {
+    color: #555;
+    line-height: 1.6;
+    font-size: 0.95em;
+}
+
+@media (max-width: 768px) {
+    .work-item {
+        padding: 30px 30px 30px 30px;
+        margin-bottom: 25px;
+        margin-left: 10px;
+    }
+
+    .work-header-section {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .work-info {
+        min-width: unset;
+    }
+
+    .company-logo {
+        align-self: center;
+    }
+
+    .company-name {
+        font-size: 1.2em;
+    }
+}
+</style>
+
+<div class="work-container">
+    <div class="work-header">
+        <h1 class="work-title">Work Experience</h1>
     </div>
-<br>
-    
-     <div class="experience-item">
-      <div class="experience-text">
-        <h3><a href="https://www.mayo.edu/research/departments-divisions/artificial-intelligence-informatics/overview">Mayo Clinic</a></h3>
-        <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/mayo-logo.jpg" style="float:right;" width="200px">
-        <p>AI Research Scientist, May 2024 - August 2024</p>
-        <p>Location: Rochester, MN, USA</p>
-        <p><b>Internship</b></p>
-        <p><a href="https://github.com/ArmanBehnam/MCI2D">Developed a clinical study by GNN explanation for finding the reasons behind mild cognitive impairment to demetia</a></p>
-      </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name"><a href="https://jarvisnetwork-staging.web.app/">Quis.Inc Startup</a></h3>
+                <div class="position-title">Founding Researcher</div>
+                <div class="work-duration">July 2025 - Present</div>
+                <div class="work-location">Chicago, IL, USA</div>
+                <div class="work-type">Full-time</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/quis.jpg" alt="Quis Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Key Responsibilities & Achievements</div>
+            <div class="work-description-text">
+                Pioneering <strong>GNN-powered search technologies</strong> as a founding team member. Leading research on Graph Neural Networks with breakthrough methods that have outperformed all state-of-the-art approaches in GNN explanation, published at top-tier venues including ECCV and NeurIPS. Developing novel algorithms and frameworks for next-generation search systems.
+            </div>
+        </div>
     </div>
-<br>
-      <br>
-    <div class="experience-item">
-      <div class="experience-text">
-        <h3>Tanzim-Yar (Reg-Tech) Startup Studio</h3>
-        <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/tanzim-yar-logo.png" style="float:right;" width="200px">
-        <p>Data Analyst, April 2021 - December 2022</p>
-        <p>Location: Tehran, Iran</p>
-        <p><b>Full-time</b></p>
-        <p>Developed complete digital identification process product as a third-party product for Fin-Tech regulation</p>
-      </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name"><a href="https://www.clarkdietrich.com/">Clarkwestern Dietrich Building Systems LLC</a></h3>
+                <div class="position-title">AI Engineering Intern</div>
+                <div class="work-duration">May 2025 - August 2025</div>
+                <div class="work-location">Merrillville, IN, USA</div>
+                <div class="work-type">Internship</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/clark.jpg" alt="Clark Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Project Overview</div>
+            <div class="work-description-text">
+                Developed multi-agent AI systems leveraging OCR and LLM-based question-answering to extract engineering parameters from unstructured documents. Successfully transformed complex technical documentation into structured JSON format using advanced inferential reasoning algorithms, creating a scalable proof-of-concept demo for document processing automation.
+            </div>
+        </div>
     </div>
-<br>
-    <br>
-    <div class="experience-item">
-      <div class="experience-text">
-        <h3>Mobarakeh Steel Company</h3>
-        <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/mobarakeh-steel-logo.jpg" style="float:right;" width="300px">
-        <p>AI Engineer, November 2020 - November 2021</p>
-        <p>Location: Esfahan, Iran</p>
-        <p><b>Part-time</b></p>
-        <p>Developed deep learning-based bearing fault detection software for real-time diagnosis system from raw data</p>
-      </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name"><a href="https://www.mayo.edu/research/departments-divisions/artificial-intelligence-informatics/overview">Mayo Clinic</a></h3>
+                <div class="position-title">AI Research Scientist</div>
+                <div class="work-duration">May 2024 - August 2024</div>
+                <div class="work-location">Rochester, MN, USA</div>
+                <div class="work-type">Internship</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/mayo-logo.jpg" alt="Mayo Clinic Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Research Impact</div>
+            <div class="work-description-text">
+                <a href="https://github.com/ArmanBehnam/MCI2D">Developed groundbreaking clinical study using GNN explanation methodologies</a> to identify causal factors in mild cognitive impairment progression to dementia. Collaborated with world-renowned expert Dr. Ronald C. Petersen, resulting in publication at IEEE BIBM 2024. Applied temporal patient data analysis including chronic diseases, biomarkers, and genetic information.
+            </div>
+        </div>
     </div>
-<br>
-<br>
-    <div class="experience-item">
-      <div class="experience-text">
-        <h3><a href="http://www.jdevs.ir/Home/EnIndex">Jahad-Daneshgahi</a></h3>
-        <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/jahad-daneshgahi-logo.jpeg" style="float:right;" width="300px">
-        <p>Data Science Lecturer, November 2018 - November 2019</p>
-        <p>Location: Tehran, Iran</p>
-        <p><b>Contract</b></p>
-        <p>Teaching data science (200 hours): Machine Learning, and Data mining by Python, and R programming languages</p>
-      </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name">Golrang Industrial Group</h3>
+                <div class="position-title">Founding Head of Data Science</div>
+                <div class="work-duration">2022 - 2024</div>
+                <div class="work-location">Tehran, Iran</div>
+                <div class="work-type">Full-time</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://via.placeholder.com/100x100/87CEFA/FFFFFF?text=GIG" alt="Golrang Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Leadership Role</div>
+            <div class="work-description-text">
+                Established and led the machine learning-driven data science division at Iran's largest industrial group with 100+ subsidiaries. Built scalable ML infrastructure and analytics capabilities across the entire organization, transforming data-driven decision-making processes and implementing enterprise-level AI solutions.
+            </div>
+        </div>
     </div>
-<br>
-<br>
-  </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name">Tanzim-Yar (Reg-Tech) Startup Studio</h3>
+                <div class="position-title">Data Analyst</div>
+                <div class="work-duration">April 2021 - December 2022</div>
+                <div class="work-location">Tehran, Iran</div>
+                <div class="work-type">Full-time</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/tanzim-yar-logo.png" alt="Tanzim-Yar Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Product Development</div>
+            <div class="work-description-text">
+                Developed comprehensive digital identification process product as a third-party solution for Fin-Tech regulatory compliance. Created end-to-end automated systems for identity verification and regulatory reporting, contributing to the company's regulatory technology infrastructure.
+            </div>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name">Mobarakeh Steel Company</h3>
+                <div class="position-title">AI Engineer</div>
+                <div class="work-duration">November 2020 - November 2021</div>
+                <div class="work-location">Esfahan, Iran</div>
+                <div class="work-type">Part-time</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/mobarakeh-steel-logo.jpg" alt="Mobarakeh Steel Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Industrial AI Implementation</div>
+            <div class="work-description-text">
+                Developed advanced deep learning-based bearing fault detection software for real-time industrial diagnosis systems. Implemented machine learning algorithms to analyze raw sensor data, enabling predictive maintenance and reducing equipment downtime in large-scale steel manufacturing operations.
+            </div>
+        </div>
+    </div>
+
+    <div class="work-item">
+        <div class="work-header-section">
+            <div class="work-info">
+                <h3 class="company-name"><a href="http://www.jdevs.ir/Home/EnIndex">Jahad-Daneshgahi</a></h3>
+                <div class="position-title">Data Science Lecturer</div>
+                <div class="work-duration">November 2018 - November 2019</div>
+                <div class="work-location">Tehran, Iran</div>
+                <div class="work-type">Contract</div>
+            </div>
+            <div class="company-logo">
+                <img src="https://raw.githubusercontent.com/ArmanBehnam/ArmanBehnam.github.io/main/images/jahad-daneshgahi-logo.jpeg" alt="Jahad-Daneshgahi Logo">
+            </div>
+        </div>
+
+        <div class="work-description">
+            <div class="work-description-title">Educational Innovation</div>
+            <div class="work-description-text">
+                Founded Iran's first and most prominent Deep Learning/Neural Network teaching platform, pioneering AI education years before such resources became mainstream. Delivered 200+ hours of comprehensive instruction in Machine Learning and Data Mining using Python and R programming languages, establishing foundation for AI education in the region.
+            </div>
+        </div>
+    </div>
+
 </div>
