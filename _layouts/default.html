@@ -1,7 +1,17 @@
 <!DOCTYPE html>
 	<html>
 		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
 			<title>{{ page.title }}</title>
+			<meta name="description" content="{{ page.description | default: 'Arman Behnam — CS PhD at Illinois Institute of Technology. Researcher in causal ML and GNNs, published at NeurIPS and ECCV.' }}">
+			<meta property="og:title" content="{{ page.title }}">
+			<meta property="og:description" content="{{ page.description | default: 'Arman Behnam — CS PhD at Illinois Institute of Technology. Researcher in causal ML and GNNs, published at NeurIPS and ECCV.' }}">
+			<meta property="og:type" content="website">
+			<meta property="og:image" content="/images/photo_2023-04-30_13-46-43.jpg">
+			<meta name="twitter:card" content="summary">
+			<meta name="twitter:title" content="{{ page.title }}">
+			<meta name="twitter:description" content="{{ page.description | default: 'Arman Behnam — CS PhD at Illinois Institute of Technology. Researcher in causal ML and GNNs, published at NeurIPS and ECCV.' }}">
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 		</head>
 		<body>
