@@ -1,6 +1,14 @@
-name: Arman Behnam
-markdown: kramdown
+name:        Arman Behnam
+title:       Arman Behnam
+description: CS PhD at Illinois Institute of Technology. Researcher in causal ML and GNNs, published at NeurIPS and ECCV.
+url:         https://armanbehnam.github.io
+baseurl:     ""
 
+author:
+  name:  Arman Behnam
+  email: abehnam@hawk.iit.edu
+
+markdown:  kramdown
 permalink: /blog/:year/:month/:day/:title
 
 plugins:
