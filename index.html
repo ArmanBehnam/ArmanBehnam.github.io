@@ -94,11 +94,42 @@ Right now, I am building <b>Internal World Models</b> with the help of causal re
 
 <h3>Under Review</h3>
 <ul>
-  <li>
-    <a href="https://arxiv.org/abs/2610.01780"><papertitle>RealCompanion: Benchmarking Human Understanding over Longitudinal Conversations</papertitle></a><br>
-    <strong>Arman Behnam</strong>, et al. <!-- TODO: authors --><br>
-    Under review at ICLR 2027. A benchmark for whether AI assistants understand a person across long-running conversations.
-  </li>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:20px;width:40%;vertical-align:middle">
+      <div class="one" style="width:100%; height:auto;">
+    <a href="images/realcompanion.svg"><img src='images/realcompanion.svg' style="width:100%; height:auto;"></a>
+      </div>
+    </td>
+    <td style="padding:20px;width:60%;vertical-align:middle">
+      <a href="https://arxiv.org/abs/2610.01780">
+    <papertitle>RealCompanion: Benchmarking Human Understanding over Longitudinal Conversations</papertitle>
+      </a>
+      <br>
+      <strong>Arman Behnam</strong>, Sunglyoung Kim
+	  <a href="https://scholar.google.com/citations?user=9vNKriIAAAAJ&hl=en">Liangwei Yang</a>
+      <br>
+      <strong>Under review at ICLR 2027</strong>
+      <br>
+      <a href="https://arxiv.org/abs/2610.01780">paper</a>
+      <ul>
+    <li>
+      <u>Description:</u> An AI companion that talks with someone for months should come to understand them.
+		Existing benchmarks use invented people because real conversations are private.
+		RealCompanion releases ten real relationships between people and an AI companion: 27,218 messages over up to 120
+		days, with a profile, a persona, and test items for each person. Every label points to the messages that support it.
+    </li>
+    <li>
+      <u>Outcome:</u> Three findings from real data. <b>People rarely refer back:</b>
+		only 3.4% of messages depend on something said earlier, usually thousands of messages back,
+		where looking at recent messages finds the right one only 2.2% of the time. <b>AI cannot tell
+		when the past matters:</b> detectors barely beat chance, and calling past messages "memories" makes models
+		bring them up 10–14 points more often, even when they are not needed. <b>AI reads more into a person than they revealed:</b> agent systems rebuild what people said well, then add traits the person never expressed.
+    </li>
+      </ul>
+    </td>
+  </tr>
+    </tbody></table>
   <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
         <td style="padding:20px;width:35%;vertical-align:middle">
