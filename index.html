@@ -99,11 +99,41 @@ Right now, I am building <b>Internal World Models</b> with the help of causal re
     <strong>Arman Behnam</strong>, et al. <!-- TODO: authors --><br>
     Under review at ICLR 2027. A benchmark for whether AI assistants understand a person across long-running conversations.
   </li>
-  <li>
-    <a href="https://arxiv.org/abs/2610.02070"><papertitle>Causal Memory Policy: Making Memory Utility Identifiable by Intervening on Retrieval</papertitle></a><br>
-    <strong>Arman Behnam</strong>, <a href="http://wangbinghui.net/">Binghui Wang</a> <!-- TODO: authors --><br>
-    Under review at ICLR 2027. Treats memory retrieval as an intervention, so the value of a stored memory can be measured.
-  </li>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:20px;width:25%;vertical-align:middle">
+      <div class="one">
+    <img src='images/cmp.png' width="260">
+      </div>
+    </td>
+    <td style="padding:20px;width:75%;vertical-align:middle">
+      <a href="https://arxiv.org/abs/2610.02070">
+    <papertitle>Causal Memory Policy: Making Memory Utility Identifiable by Intervening on Retrieval</papertitle>
+      </a>
+      <br>
+      <strong>Arman Behnam</strong>,
+      <a href="http://wangbinghui.net/">Binghui Wang</a>
+      <br>
+      <strong>Under review at ICLR 2027</strong>
+      <br>
+      <a href="https://arxiv.org/abs/2610.02070">paper</a>
+      <ul>
+    <li>
+      <u>Description:</u> AI assistants with long-term memory must decide which memories to keep,
+		and they do this by estimating how much each memory helps. But a memory that is never retrieved never affects
+		the answer, so its value cannot be measured. CMP fixes this by reserving a few context slots for memories
+		sampled at random with known probabilities. It then estimates each memory's value with inverse propensity weighting.
+    </li>
+    <li>
+      <u>Outcome:</u> Memory value cannot be estimated for 54% of needed memories on LongMemEval
+		and 67% on LoCoMo, and the problem also appears in a deployed memory system. CMP improves how well needed
+		memories are separated from unneeded ones from 0.54 to 0.66 AUC. We prove the estimator is unbiased,
+		derive its exact variance, and give the optimal rule for deciding which memories to keep or delete.
+    </li>
+      </ul>
+    </td>
+  </tr>
+    </tbody></table>
   <li>
     <papertitle>Reasoning Models Are Accurate but Unsound on Identification</papertitle><br>
     <strong>Arman Behnam</strong>, <a href="http://wangbinghui.net/">Binghui Wang</a> <!-- TODO: authors --><br>
