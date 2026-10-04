@@ -115,9 +115,10 @@ border-radius:50%; object-fit:cover; object-position:center 30%; margin:0 0 16px
       <strong>Arman Behnam</strong>,
       <a href="http://wangbinghui.net/">Binghui Wang</a>
       <br>
-      <strong>Under review at ICLR 2027</strong>
-      <br>
-      <a href="https://arxiv.org/abs/2610.02070">paper</a>
+<!--      <strong>Under review at ICLR 2027</strong>-->
+<!--      <br>-->
+      <a href="https://arxiv.org/abs/2610.02070">paper</a>/
+      <a href="https://anonymous.4open.science/r/cmp-release-D0C3/">code</a>
       <ul>
     <li>
       AI memory systems judge each memory by its effect when retrieved, so a memory that is never retrieved
@@ -139,18 +140,43 @@ border-radius:50%; object-fit:cover; object-position:center 30%; margin:0 0 16px
     <td style="padding:20px;width:60%;vertical-align:middle">
     <papertitle>Reasoning Models Are Accurate but Unsound on Identification</papertitle>
       <br>
-      <strong>Arman Behnam</strong>, <a href="http://wangbinghui.net/">Binghui Wang</a>
+      <strong>Arman Behnam</strong>, <a href="http://wangbinghui.net/">Binghui Wang</a>/
+      <a href="https://anonymous.4open.science/r/certid-D718">code</a>
       <br>
-      <strong>Under review at ICLR 2027</strong>
-      <p>When asked whether a causal effect can be recovered from observational data, a reasoning model can give a formula for a question that has no valid answer, and no data can expose that mistake. We build CertID, which certifies every test instance with the complete <i>ID</i> algorithm and checks returned formulas exactly against causal models with known answers. Across TODO certified instances, three frontier models' false-claim rates differ by TODO on the same instances, so accuracy alone is a poor measure of soundness.</p>
+<!--      <strong>Under review at ICLR 2027</strong>-->
+      <p>When asked whether a causal effect can be recovered from observational data, a
+		  reasoning model can give a formula for a question that has no valid answer,
+		  and no data can expose that mistake. We build CertID, which certifies every
+		  test instance with the complete <i>ID</i> algorithm and checks returned formulas
+		  exactly against causal models with known answers. Accuracy alone is a poor measure of soundness.</p>
     </td>
   </tr>
     </tbody></table>
-  <li>
-    <papertitle>Top-k Retrieval Leaves Memory Value Undetermined</papertitle><br>
-    <strong>Arman Behnam</strong>, <a href="http://wangbinghui.net/">Binghui Wang</a> <!-- TODO: authors --><br>
-    Under review at ICLR 2027. Proposes an A-optimality criterion for breaking ties in retrieval.
-  </li>
+  <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+  <tr>
+    <td style="padding:20px;width:40%;vertical-align:middle">
+      <div class="one" style="width:100%; height:auto;">
+    <a href="images/ledger.svg"><img src='images/ledger.svg' style="width:100%; height:auto;"></a>
+      </div>
+    </td>
+    <td style="padding:20px;width:60%;vertical-align:middle">
+    <papertitle>Top-k Retrieval Leaves Memory Value Undetermined</papertitle>
+		</a>
+      <br>
+      <strong>Arman Behnam</strong>
+      <br>
+      <a href="https://anonymous.4open.science/r/ledger-review-AF71/">code</a>
+      <br>
+      <p>A memory agent can judge its memories only from its retrieval log,
+		  but that log often cannot separate one memory's contribution from another's.
+		  We prove that top-<i>k</i> retrieval leaves every memory's value undetermined,
+		  however many episodes are logged, and on 14 standard benchmarks no value is determined
+		  in any of 55 configurations. LEDGER reports which values the log does determine, with
+		  confidence intervals, and retrieves so that more become determined: on pooled HotpotQA,
+		  from 0.1% to 79.7% of memories.</p>
+    </td>
+  </tr>
+    </tbody></table>
 </ul>
 
 <!--<h3>Publications</h3>-->
