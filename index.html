@@ -109,14 +109,15 @@ Right now, I am building <b>Internal World Models</b> with the help of causal re
     Under review at ICLR 2027. Proposes an A-optimality criterion for breaking ties in retrieval.
   </li>
 </ul>
+
 <h3>Publications</h3>
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
   <tr>
     <td style="padding:20px;width:25%;vertical-align:middle">
       <div class="one">
-    <img src='images/structure_agnostic.png' width="200"> <!-- TODO: add this image -->
-      </div>
+    <img src='images/sacrl.png' width="260">
+	  </div>
     </td>
     <td style="padding:20px;width:75%;vertical-align:middle">
       <a href="https://arxiv.org/abs/2610.00968">
@@ -124,17 +125,24 @@ Right now, I am building <b>Internal World Models</b> with the help of causal re
       </a>
       <br>
       <strong>Arman Behnam</strong>,
-      <a href="http://wangbinghui.net/">Binghui Wang</a> <!-- TODO: confirm authors -->
+      <a href="http://wangbinghui.net/">Binghui Wang</a>
       <br>
       <strong>40th Annual Conference on Neural Information Processing Systems; December 2026</strong>
       <br>
-      <a href="https://arxiv.org/abs/2610.00968">paper</a>
+      <a href="https://arxiv.org/abs/2610.00968">paper</a> /
+      <a href="https://github.com/ArmanBehnam/sacrl">code</a>
       <ul>
     <li>
-      <u>Description:</u> TODO: one or two sentences on what the method does.
+      <u>Description:</u> Causal representation learning normally requires knowing the causal structure in advance,
+		and choosing the wrong one forces the model to throw away useful information. SaCRL learns the causal structure
+		and the robust representation together. It scores each candidate structure by how much its invariance
+		constraints are violated (measured with HSIC), and automatically shifts weight toward the structure that fits the data.
     </li>
     <li>
-      <u>Outcome:</u> TODO: main result.
+      <u>Outcome:</u> Theoretical guarantees for identifying the structure, satisfying invariance, and generalizing
+		out of distribution. SaCRL recovers the true structure on synthetic and semi-synthetic benchmarks,
+		beats fixed-structure baselines on Colored MNIST, reaches state-of-the-art accuracy on PACS, VLCS,
+		and OfficeHome, and degrades gracefully when the structure is misspecified.
     </li>
       </ul>
     </td>
