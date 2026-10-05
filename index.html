@@ -137,12 +137,12 @@ border-radius:50%; object-fit:cover; object-position:center 30%; margin:0 0 16px
         <a href="https://arxiv.org/abs/2610.03519">paper</a> /
       <a href="https://anonymous.4open.science/r/certid-D718">code</a>
       <br>
-<!--      <strong>Under review at ICLR 2027</strong>-->
-      <p>When asked whether a causal effect can be recovered from observational data, a
-		  reasoning model can give a formula for a question that has no valid answer,
-		  and no data can expose that mistake. We build CertID, which certifies every
-		  test instance with the complete <i>ID</i> algorithm and checks returned formulas
-		  exactly against causal models with known answers. Accuracy alone is a poor measure of soundness.</p>
+<p>Ask a reasoning model whether a causal effect can be computed from data, and it may return a
+    confident formula for a question that has no valid answer. No amount of data can ever reveal that mistake.
+    CertID is built to catch it: the complete <i>ID</i> algorithm certifies whether each question can be answered
+    at all, and every formula a model returns is checked exactly against causal models whose true answers are known.
+    Testing Gemini Flash, Gemini Pro, and GPT-5.5 on the same questions, we find that their rates of these false
+    claims differ widely, so accuracy alone says little about whether a model's causal reasoning can be trusted.</p>
     </td>
   </tr>
     </tbody></table>
