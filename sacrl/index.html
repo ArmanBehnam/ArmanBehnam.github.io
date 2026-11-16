@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SaCRL: Structure-agnostic Causal Representation Learning</title>
+  <meta name="description" content="SaCRL jointly identifies which of three canonical causal structures generated the data and learns the matching invariant representation. NeurIPS 2026.">
+  <link rel="canonical" href="https://armanbehnam.com/sacrl/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://armanbehnam.com/sacrl/">
+  <meta property="og:title" content="SaCRL: Structure-agnostic Causal Representation Learning (NeurIPS 2026)">
+  <meta property="og:description" content="Learn the causal structure and the invariant representation together, without knowing the structure in advance.">
+  <meta property="og:image" content="https://armanbehnam.com/images/sacrl.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SaCRL: Structure-agnostic Causal Representation Learning (NeurIPS 2026)">
+  <meta name="twitter:description" content="Learn the causal structure and the invariant representation together, without knowing the structure in advance.">
+  <meta name="twitter:image" content="https://armanbehnam.com/images/sacrl.png">
+
+  <style>
+    :root {
+      --text: #1a202c;
+      --muted: #4a5568;
+      --link: #1772d0;
+      --accent: #f09228;
+      --bg: #ffffff;
+      --panel: #f7f9fc;
+      --border: #e2e8f0;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    a { color: var(--link); text-decoration: none; }
+    a:hover { color: var(--accent); }
+    main { max-width: 900px; margin: 0 auto; padding: 48px 16px 64px; }
+    header { text-align: center; }
+    h1 { font-size: 2.1rem; line-height: 1.25; margin: 0 0 4px; }
+    .acronym { color: var(--link); }
+    .venue { font-size: 1.15rem; font-weight: 600; color: var(--muted); margin: 6px 0 18px; }
+    header p { text-align: center; }
+    .authors { font-size: 1.15rem; margin: 0; }
+    .authors a { font-weight: 500; }
+    .affil { color: var(--muted); margin: 2px 0 26px; }
+    .buttons { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 36px; }
+    .btn {
+      display: inline-block; padding: 9px 20px; border-radius: 999px;
+      background: #1a202c; color: #fff; font-weight: 600; font-size: 0.95rem;
+    }
+    .btn:hover { background: var(--link); color: #fff; }
+    .tldr {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 10px;
+      padding: 16px 20px; margin: 0 0 32px; text-align: left;
+    }
+    figure { margin: 0 0 36px; text-align: center; }
+    figure img { width: 100%; height: auto; border: 1px solid var(--border); border-radius: 8px; background: #fff; }
+    figcaption { color: var(--muted); font-size: 0.92rem; margin-top: 8px; text-align: left; }
+    h2 { font-size: 1.4rem; margin: 36px 0 10px; border-bottom: 1px solid var(--border); padding-bottom: 6px; }
+    p { margin: 0 0 14px; text-align: justify; }
+    .bibtex-wrap { position: relative; }
+    pre {
+      background: var(--panel); border: 1px solid var(--border); border-radius: 8px;
+      padding: 16px; overflow-x: auto; font-size: 0.85rem; line-height: 1.45; margin: 0;
+    }
+    .copy {
+      position: absolute; top: 8px; right: 8px; border: 1px solid var(--border); background: #fff;
+      border-radius: 6px; padding: 4px 10px; font-size: 0.8rem; cursor: pointer;
+    }
+    footer { text-align: center; color: var(--muted); font-size: 0.85rem; margin-top: 48px; }
+    @media (max-width: 600px) {
+      body { font-size: 16px; }
+      h1 { font-size: 1.6rem; }
+      p { text-align: left; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><span class="acronym">SaCRL</span>: Structure-agnostic Causal Representation Learning</h1>
+    <div class="venue">NeurIPS 2026</div>
+    <p class="authors">
+      <a href="https://armanbehnam.com/">Arman Behnam</a> &nbsp;&middot;&nbsp;
+      <a href="http://wangbinghui.net/">Binghui Wang</a>
+    </p>
+    <p class="affil">Illinois Institute of Technology</p>
+    <nav class="buttons">
+      <a class="btn" href="https://arxiv.org/abs/2610.00968">Paper</a>
+      <a class="btn" href="https://arxiv.org/pdf/2610.00968">PDF</a>
+      <a class="btn" href="https://github.com/ArmanBehnam/sacrl">Code</a>
+      <a class="btn" href="https://neurips.cc/virtual/2026/loc/atlanta/poster/155070">Poster</a>
+      <a class="btn" href="#bibtex">BibTeX</a>
+    </nav>
+  </header>
+
+  <div class="tldr">
+    <strong>TL;DR.</strong> Invariant representation learning needs the right causal structure, and the wrong one
+    throws away predictive information. SaCRL learns which structure generated the data and the matching
+    invariant representation together, with no prior knowledge of the structure.
+  </div>
+
+  <figure>
+    <img src="../images/sacrl.png" alt="Structure-specific methods work only when the assumed structure is correct; SaCRL selects among three candidate causal structures: anti-causal, confounded-descendant, and confounded-outcome.">
+    <figcaption>
+      Top: a structure-specific method succeeds only if it assumes the correct structure; SaCRL selects it from data.
+      Bottom: the three candidate causal structures, each with its own invariance.
+    </figcaption>
+  </figure>
+
+  <h2>Abstract</h2>
+  <p>
+    Causal representation learning aims to discover robust features by exploiting the causal structure underlying
+    data generation. Existing methods require specifying the causal structure a priori, yet different structures
+    demand fundamentally incompatible invariance constraints, and misspecification leads to representations that
+    discard predictive information. We introduce SaCRL, a framework that jointly identifies which of three canonical
+    causal structures generated the data and learns the corresponding invariant representation without prior
+    structural knowledge. Our approach formulates structure selection as a soft optimization over candidate
+    invariances using violation metrics based on the Hilbert&ndash;Schmidt independence criterion (HSIC), with
+    adaptive weights that automatically concentrate on the achievable structure. We provide theoretical guarantees
+    for structure identification (also under random-feature approximation), invariance satisfaction, and
+    out-of-distribution generalization. Empirically, SaCRL recovers the true structure in most runs on synthetic
+    and semi-synthetic Bayesian-network benchmarks, outperforms fixed-invariance baselines on Colored MNIST,
+    achieves the best accuracy among the compared objectives on three DomainBed benchmarks (PACS, VLCS, OfficeHome)
+    with a frozen backbone, and outperforms ERM under structural misspecification and limited environment diversity.
+  </p>
+
+  <h2 id="bibtex">BibTeX</h2>
+  <div class="bibtex-wrap">
+    <button class="copy" type="button" onclick="copyBib(this)">Copy</button>
+<pre id="bib">@inproceedings{behnam2026sacrl,
+  title     = {Structure-agnostic Causal Representation Learning},
+  author    = {Behnam, Arman and Wang, Binghui},
+  booktitle = {Advances in Neural Information Processing Systems (NeurIPS)},
+  year      = {2026}
+}</pre>
+  </div>
+
+  <footer>
+    <a href="https://armanbehnam.com/">armanbehnam.com</a>
+  </footer>
+</main>
+<script>
+  function copyBib(btn) {
+    var text = document.getElementById('bib').innerText;
+    try {
+      navigator.clipboard.writeText(text).then(function () {
+        btn.textContent = 'Copied';
+        setTimeout(function () { btn.textContent = 'Copy'; }, 1500);
+      });
+    } catch (e) { /* clipboard unavailable: user can select the text */ }
+  }
+</script>
+</body>
+</html>
